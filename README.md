@@ -47,21 +47,24 @@ config.ini από τις δοκιμές μας παραπάνω).
 
 Το πρόγραμμα που προσμοιώθηκε είναι το sort.c με παράμετρο N=1,000.
 
-MinorCPU, DDR3 1600 8x8
+### MinorCPU, DDR3 1600 8x8
+
 Συχνότητα|Sim Time|Real Time
 ---------|--------|---------
 1GHz     |6.740ms |28.99s
 2GHz     |3.385ms |29.21s
 4GHz     |1.707ms |29.05s
 
-TimingSimpleCPU, DDR3 1600 8x8
+### TimingSimpleCPU, DDR3 1600 8x8
+
 Συχνότητα|Sim Time|Real Time
 ---------|--------|---------
 1GHz     |20.501ms|11.57s
 2GHz     |10.265ms|11.41s
 4GHz     |5.147ms |11.60s
 
-AtomicSimpleCPU, DDR3 1600 8x8
+### AtomicSimpleCPU, DDR3 1600 8x8
+
 Συχνότητα|Sim Time|Real Time
 ---------|--------|---------
 1GHz     |6.936ms |6.25s
@@ -73,14 +76,16 @@ AtomicSimpleCPU, DDR3 1600 8x8
 περισσότερο χρόνο διότι εμφανίζονται καθυστερήσεις στις προσβάσεις της μνήμης.
 Τέλος, τα απλούστερα μοντέλα τρέχουν σε μικρότερο (πραγματικό) χρόνο.
 
-MinorCPU, 1GHz
+### MinorCPU, 1GHz
+
 Τύπος Μνήμης       |Sim Time|Real Time
 -------------------|--------|---------
 DDR3 1600 8x8      |3.385ms |30.54s
 DDR4 2400 8x8      |3.384ms |30.12s
 LPDDR2 S4 1066 1x32|3.395ms |28.53s
 
-TimingSimpleCPU, 1GHz
+### TimingSimpleCPU, 1GHz
+
 Τύπος Μνήμης       |Sim Time|Real Time
 -------------------|--------|---------
 DDR3 1600 8x8      |10.265ms|11.64s
