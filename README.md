@@ -15,7 +15,7 @@
 Τύπος Μνήμης                 |DDR3 1600 8x8|[system.mem_ctrls1] : tCK=1250 (ps) -> 1600MHz
 Πλήθος Καναλιών Μνήμης       |2            |[system.mem_ctrls0]: channels=2
 Μέγεθος Μνήμης               |2GB          |[system] : mem_ranges=0:2147483647
-Μέγεθος γραμμής Κρυφής Μνήμης|64ΜΒ         |[system] : cache_line_size=64
+Μέγεθος γραμμής Κρυφής Μνήμης|64B          |[system] : cache_line_size=64
 
 Διαθέτουμε 2 DRAM Controllers, ένα για κάθε κανάλι.
 Το σύστημα έχει CPU Cluster με ένα thread.
