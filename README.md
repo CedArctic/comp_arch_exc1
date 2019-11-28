@@ -30,10 +30,10 @@
 
 ### Benchmarks
 
-Benchmark|Χρόνος|CPI|L1 DCache|L1 ICache|L2 Cache
----------|------|---|---------|---------|--------
+Benchmark|Χρόνος|CPI     |L1 DCache|L1 ICache|L2 Cache
+---------|------|--------|---------|---------|--------
 bzip     |
-mcf      |
+mcf      |0.369 |1.782987|0.010232 |0.034624 |0.299419
 hmmer    |
 sjeng    |
 libm     |
