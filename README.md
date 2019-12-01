@@ -59,3 +59,10 @@ system clock.
 αποτέλεσμα τον ακριβή υποδιπλασιασμό του χρόνο εκτέλεσης. Αυτό οφείλεται στο
 γεγονός ότι μεγάλο μέρος του χρόνου εκτέλεσης δαπανάται σε προσβάσεις στην
 μνήμη. Η επιτάχυνση είναι μικρότερη όταν έχουμε υψηλό miss rate.
+
+### Graphs
+![Execution Time](/img/step1_exec_time.png)
+![CPI](/img/step1_CPI.png)
+![D-Cache Miss Rate](/img/step1_dcache.png)
+![I-Cache Miss Rate](/img/step1_icache.png)
+![L2 Cache Miss Rate](/img/step1_l2.png)
