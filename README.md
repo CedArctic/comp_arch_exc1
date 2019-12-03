@@ -83,8 +83,8 @@ system clock.
 Στη συνέχεια, δοκιμάσαμε να μεταβάλλλουμε το μέγεθος γραμμής. Παρατηρήσαμε ότι
 αυτή η μεταβολή επηρέασε σημαντικά το CPI των παραπάνω benchmark.
 
-TODO: Graph
-
+![CPI](/img/step2_libm_blocksize.png)
+![CPI](/img/step2_sjeng.png)
 
 * ### mcf
 
