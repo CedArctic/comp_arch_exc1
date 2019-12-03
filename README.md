@@ -80,10 +80,12 @@ system clock.
 ![CPI](/img/step2_sjeng_l2.png)
 
 Στη συνέχεια, δοκιμάσαμε να μεταβάλλλουμε το μέγεθος γραμμής. Παρατηρήσαμε ότι
-αυτή η μεταβολή επηρέασε σημαντικά το CPI των παραπάνω benchmark.
+αυτή η μεταβολή επηρέασε σημαντικά το CPI των παραπάνω benchmark καθώς και το
+miss rate της D-Cache.
 
 ![CPI](/img/step2_libm_blocksize.png)
 ![CPI](/img/step2_sjeng_blocksize.png)
+![D-Cache Miss Rate](/img/step2_libm_sjeng_dcache.png)
 
 * ### mcf
 
