@@ -61,11 +61,11 @@ system clock.
 μνήμη. Η επιτάχυνση είναι μικρότερη όταν έχουμε υψηλό miss rate.
 
 ### Graphs
-![Execution Time](/img/step1_exec_time.png)
-![CPI](/img/step1_CPI.png)
-![D-Cache Miss Rate](/img/step1_dcache.png)
-![I-Cache Miss Rate](/img/step1_icache.png)
-![L2 Cache Miss Rate](/img/step1_l2.png)
+![Execution Time](/Lab2/img/step1_exec_time.png)
+![CPI](/Lab2/img/step1_CPI.png)
+![D-Cache Miss Rate](/Lab2/img/step1_dcache.png)
+![I-Cache Miss Rate](/Lab2/img/step1_icache.png)
+![L2 Cache Miss Rate](/Lab2/img/step1_l2.png)
 
 ## Βήμα 2ο
 
@@ -77,16 +77,16 @@ system clock.
 αύξηση του μεγέθους της L2. H αύξηση του associativity πέρα απο 8-way δεν
 επηρέασε καθόλου την απόδοση.
 
-![CPI](/img/step2_libm_l2.png)
-![CPI](/img/step2_sjeng_l2.png)
+![CPI](/Lab2/img/step2_libm_l2.png)
+![CPI](/Lab2/img/step2_sjeng_l2.png)
 
 Στη συνέχεια, δοκιμάσαμε να μεταβάλλλουμε το μέγεθος γραμμής. Παρατηρήσαμε ότι
 αυτή η μεταβολή επηρέασε σημαντικά το CPI των παραπάνω benchmark καθώς και το
 miss rate της D-Cache.
 
-![CPI](/img/step2_libm_blocksize.png)
-![CPI](/img/step2_sjeng_blocksize.png)
-![D-Cache Miss Rate](/img/step2_libm_sjeng_dcache.png)
+![CPI](/Lab2/img/step2_libm_blocksize.png)
+![CPI](/Lab2/img/step2_sjeng_blocksize.png)
+![D-Cache Miss Rate](/Lab2/img/step2_libm_sjeng_dcache.png)
 
 * ### mcf
 
@@ -98,7 +98,7 @@ ICache και μια βελτίωση κατά 0.15 στο CPI.
 Αυτό οφείλεται στο γεγονός ότι το benchmark περιέχει έναν βρόγχο επανάληψης
 ο οποίος δε χωράει ολόκληρος στην default L1 I-Cache.
 
-![MCF IC](/img/step2_mcf_ic.png)
+![MCF IC](/Lab2/img/step2_mcf_ic.png)
 
 * ### bzip
 
@@ -110,8 +110,8 @@ H bzip είχε εξ αρχής καλή απόδοση όσον αφορά το
 configurations ενώ έφερε κάποιες μικρές βελτιώσεις στο L2 cache miss rate, δεν
 έφερε κάποια ιδιαίτερη βελτίωση στο συνολικό CPI.
 
-![L2 Miss Rate](/img/step2_bzip_l2.png)
-![D-Cache Miss Rate](/img/step2_bzip_dcache.png)
+![L2 Miss Rate](/Lab2/img/step2_bzip_l2.png)
+![D-Cache Miss Rate](/Lab2/img/step2_bzip_dcache.png)
 
 * ### hmmer
 
@@ -120,8 +120,8 @@ configurations ενώ έφερε κάποιες μικρές βελτιώσει�
 ρυθμίσεις της L1 όπου είδαμε βελτίωση με περισσότερο associativity όπως και με
 την αύξηση του μεγέθους.
 
-![L2 - D-Cache Miss Rate](/img/step2_hmmer_dcache.png)
-![I-Cache Miss Rate](/img/step2_hmmer_icache.png) 
+![L2 - D-Cache Miss Rate](/Lab2/img/step2_hmmer_dcache.png)
+![I-Cache Miss Rate](/Lab2/img/step2_hmmer_icache.png) 
 
 ### Βέλτιστες Ρυθμίσεις
 
