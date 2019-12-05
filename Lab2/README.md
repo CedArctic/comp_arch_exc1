@@ -48,7 +48,8 @@ hmmer    |118.530ms|1.185304|0.001629 |0.000221 |0.077747
 sjeng    |704.056ms|7.040561|0.121831 |0.000020 |0.999972
 libm     |262.327ms|2.623265|0.060971 |0.000094 |0.999944
 
-Το system χρονίζεται και στις δύο περιπτώσεις στα 1GHz (system.clk_domain).  Αυτό το ρολόι χρησιμοποιείται για τον συγχρονισμό όλων των εξαρτημάτων πάνω
+Το system χρονίζεται και στις δύο περιπτώσεις στα 1GHz (system.clk_domain). 
+Αυτό το ρολόι χρησιμοποιείται για τον συγχρονισμό όλων των εξαρτημάτων πάνω
 στην motherboard. Αντίθετα, το cpu_clk_domain αναφέρεται στο ρολόι του
 επεξεργαστή, το οποίο είναι κατά κανόνα πολλαπλάσιο του system clock. Αν
 προσθέσουμε επιπλέον επεξεργαστές, αυτοί θα χρονίζονται σε πολλαπλάσια του
@@ -60,11 +61,11 @@ system clock.
 μνήμη. Η επιτάχυνση είναι μικρότερη όταν έχουμε υψηλό miss rate.
 
 ### Graphs
-![Execution Time](/Lab2/img/step1_exec_time.png)
-![CPI](/Lab2/img/step1_CPI.png)
-![D-Cache Miss Rate](/Lab2/img/step1_dcache.png)
-![I-Cache Miss Rate](/Lab2/img/step1_icache.png)
-![L2 Cache Miss Rate](/Lab2/img/step1_l2.png)
+![Execution Time](/img/step1_exec_time.png)
+![CPI](/img/step1_CPI.png)
+![D-Cache Miss Rate](/img/step1_dcache.png)
+![I-Cache Miss Rate](/img/step1_icache.png)
+![L2 Cache Miss Rate](/img/step1_l2.png)
 
 ## Βήμα 2ο
 
@@ -76,16 +77,16 @@ system clock.
 αύξηση του μεγέθους της L2. H αύξηση του associativity πέρα απο 8-way δεν
 επηρέασε καθόλου την απόδοση.
 
-![CPI](/Lab2/img/step2_libm_l2.png)
-![CPI](/Lab2/img/step2_sjeng_l2.png)
+![CPI](/img/step2_libm_l2.png)
+![CPI](/img/step2_sjeng_l2.png)
 
 Στη συνέχεια, δοκιμάσαμε να μεταβάλλλουμε το μέγεθος γραμμής. Παρατηρήσαμε ότι
 αυτή η μεταβολή επηρέασε σημαντικά το CPI των παραπάνω benchmark καθώς και το
 miss rate της D-Cache.
 
-![CPI](/Lab2/img/step2_libm_blocksize.png)
-![CPI](/Lab2/img/step2_sjeng_blocksize.png)
-![D-Cache Miss Rate](/Lab2/img/step2_libm_sjeng_dcache.png)
+![CPI](/img/step2_libm_blocksize.png)
+![CPI](/img/step2_sjeng_blocksize.png)
+![D-Cache Miss Rate](/img/step2_libm_sjeng_dcache.png)
 
 * ### mcf
 
@@ -94,10 +95,65 @@ miss rate της D-Cache.
 αύξηση του μεγέθους της σε 64KB επέφεραν σημαντίκη βελτίωση στο miss rate της
 ICache και μια βελτίωση κατά 0.15 στο CPI.
 
-![MCF IC](/Lab2/img/step2_mcf_ic.png)
+Αυτό οφείλεται στο γεγονός ότι το benchmark περιέχει έναν βρόγχο επανάληψης
+ο οποίος δε χωράει ολόκληρος στην default L1 I-Cache.
+
+![MCF IC](/img/step2_mcf_ic.png)
 
 * ### bzip
 
-H bzip είχε εξ αρχής καλή απόδοση όσον αφορά το CPI στις default ρυθμίσεις του συστήματος που εξομοιώνουμε. Παρατηρήσαμε ότι ένα πιθανό σημείο όπου θα μπορούσε να γίνει βελτίωση ήταν το miss rate στην L2 και D-Cache. Μέσα από τις δοκιμές μας για διάφορες ρυθμίσεις για την D-Cache δεν βρήκαμε κάποια αξιοσημείωτη βελτίωση. Επίσης ο πειραματισμός μας με διαφορετικά cache line sizes ενώ έφερε κάποιες μικρές βελτιώσεις στο L2 cache miss rate, δεν έφερε κάποια ιδιαίτερη βελτίωση στο συνολικό CPI.
+H bzip είχε εξ αρχής καλή απόδοση όσον αφορά το CPI στις default ρυθμίσεις του
+συστήματος που εξομοιώνουμε. Παρατηρήσαμε ότι ένα πιθανό σημείο όπου θα μπορούσε
+να γίνει βελτίωση ήταν το miss rate στην L2 και D-Cache. Μέσα από τις δοκιμές
+μας για διάφορες ρυθμίσεις για την D-Cache δεν βρήκαμε κάποια αξιοσημείωτη
+βελτίωση. Επίσης ο πειραματισμός μας με διαφορετικά cache line sizes και L2
+configurations ενώ έφερε κάποιες μικρές βελτιώσεις στο L2 cache miss rate, δεν
+έφερε κάποια ιδιαίτερη βελτίωση στο συνολικό CPI.
 
-TODO: Benchmarks για χειροτέρευση bzip & L2 targeting 
+![L2 Miss Rate](/img/step2_bzip_l2.png)
+![D-Cache Miss Rate](/img/step2_bzip_dcache.png)
+
+* ### hmmer
+
+Δοκιμάσαμε να μεταβάλλουμε τις παραμέτρους της L1 (D-Cache/I-Cache), της L2
+καθώς και το μέγεθος γραμμής. Βελτίωση είδαμε μόνο στον πειραματισμό μας με τις
+ρυθμίσεις της L1 όπου είδαμε βελτίωση με περισσότερο associativity όπως και με
+την αύξηση του μεγέθους.
+
+![L2 - D-Cache Miss Rate](/img/step2_hmmer_dcache.png)
+![I-Cache Miss Rate](/img/step2_hmmer_icache.png) 
+
+### Βέλτιστες Ρυθμίσεις
+
+* libm, sjeng
+
+Παράμετρος      |Τιμή
+----------------|------
+L2 Μέγεθος      |4MB
+L2 Associativity|16-way
+Μέγεθος Γραμμής |256B
+
+* mcf
+
+Παράμετρος           |Τιμή
+---------------------|-----
+I-Cache Μέγεθος      |64KB
+I-Cache Associativity|2-way
+
+* bzip
+
+Παράμετρος           |Τιμή
+---------------------|-----
+D-Cache Μέγεθος      |128KB
+D-Cache Associativity|4-way
+L2 Μέγεθος           |4MB
+L2 Associativity     |8-way
+
+* hmmer
+
+Παράμετρος           |Τιμή
+---------------------|-----
+I-Cache Μέγεθος      |64KB
+I-Cache Associativity|2-way
+D-Cache Μέγεθος      |64KB
+D-Cache Associativity|2-way
