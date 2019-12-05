@@ -60,11 +60,11 @@ system clock.
 μνήμη. Η επιτάχυνση είναι μικρότερη όταν έχουμε υψηλό miss rate.
 
 ### Graphs
-![Execution Time](/img/step1_exec_time.png)
-![CPI](/img/step1_CPI.png)
-![D-Cache Miss Rate](/img/step1_dcache.png)
-![I-Cache Miss Rate](/img/step1_icache.png)
-![L2 Cache Miss Rate](/img/step1_l2.png)
+![Execution Time](/Lab2/img/step1_exec_time.png)
+![CPI](/Lab2/img/step1_CPI.png)
+![D-Cache Miss Rate](/Lab2/img/step1_dcache.png)
+![I-Cache Miss Rate](/Lab2/img/step1_icache.png)
+![L2 Cache Miss Rate](/Lab2/img/step1_l2.png)
 
 ## Βήμα 2ο
 
@@ -76,16 +76,16 @@ system clock.
 αύξηση του μεγέθους της L2. H αύξηση του associativity πέρα απο 8-way δεν
 επηρέασε καθόλου την απόδοση.
 
-![CPI](/img/step2_libm_l2.png)
-![CPI](/img/step2_sjeng_l2.png)
+![CPI](/Lab2/img/step2_libm_l2.png)
+![CPI](/Lab2/img/step2_sjeng_l2.png)
 
 Στη συνέχεια, δοκιμάσαμε να μεταβάλλλουμε το μέγεθος γραμμής. Παρατηρήσαμε ότι
 αυτή η μεταβολή επηρέασε σημαντικά το CPI των παραπάνω benchmark καθώς και το
 miss rate της D-Cache.
 
-![CPI](/img/step2_libm_blocksize.png)
-![CPI](/img/step2_sjeng_blocksize.png)
-![D-Cache Miss Rate](/img/step2_libm_sjeng_dcache.png)
+![CPI](/Lab2/img/step2_libm_blocksize.png)
+![CPI](/Lab2/img/step2_sjeng_blocksize.png)
+![D-Cache Miss Rate](/Lab2/img/step2_libm_sjeng_dcache.png)
 
 * ### mcf
 
@@ -94,7 +94,7 @@ miss rate της D-Cache.
 αύξηση του μεγέθους της σε 64KB επέφεραν σημαντίκη βελτίωση στο miss rate της
 ICache και μια βελτίωση κατά 0.15 στο CPI.
 
-![MCF IC](/img/step2_mcf_ic.png)
+![MCF IC](/Lab2/img/step2_mcf_ic.png)
 
 * ### bzip
 
