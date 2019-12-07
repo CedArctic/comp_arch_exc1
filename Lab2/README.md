@@ -91,27 +91,34 @@ TODO: Rewrite the following
 
 Το πρώτο πρόβλημα που εντοπίσαμε είναι το υψηλό miss rate της L2 cache στα libm
 και sjeng. Δοκιμάσαμε να μεταβάλλουμε το μέγεθος και το associativity της L2,
-όμως δέν παρατηρήσαμε αλλαγή στο miss rate. To CPI βελτιώθηκε ελάχιστα με την
+όμως δεν παρατηρήσαμε αλλαγή στο miss rate. To CPI βελτιώθηκε ελάχιστα με την
 αύξηση του μεγέθους της L2. H αύξηση του associativity πέρα απο 8-way δεν
 επηρέασε καθόλου την απόδοση.
 
+#### libm
 ![CPI](/Lab2/img/step2_libm_l2.png)
+
+#### sjeng
 ![CPI](/Lab2/img/step2_sjeng_l2.png)
 
 Στη συνέχεια, δοκιμάσαμε να μεταβάλλλουμε το μέγεθος γραμμής. Παρατηρήσαμε ότι
 αυτή η μεταβολή επηρέασε σημαντικά το CPI των παραπάνω benchmark καθώς και το
 miss rate της D-Cache.
 
+#### libm
 ![CPI](/Lab2/img/step2_libm_blocksize.png)
+
+#### sjeng
 ![CPI](/Lab2/img/step2_sjeng_blocksize.png)
+
 ![D-Cache Miss Rate](/Lab2/img/step2_libm_sjeng_dcache.png)
 
 * ### mcf
 
 Για να βελτιώσουμε την απόδοση του mcf δοκιμάσαμε να μεταβάλλουμε τα
-χαρακτηρηστικά της L1 ICache. Η αύξηση του associativity σε 4-way καθώς και η
+χαρακτηρηστικά της L1 I-Cache. Η αύξηση του associativity σε 4-way καθώς και η
 αύξηση του μεγέθους της σε 64KB επέφεραν σημαντίκη βελτίωση στο miss rate της
-ICache και μια βελτίωση κατά 0.15 στο CPI.
+I-Cache και μια βελτίωση κατά 0.15 στο CPI.
 
 Αυτό οφείλεται στο γεγονός ότι το benchmark περιέχει έναν βρόγχο επανάληψης
 ο οποίος δε χωράει ολόκληρος στην default L1 I-Cache.
