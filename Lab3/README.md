@@ -160,7 +160,7 @@ libm|660.17|725.11|662.31|734.37|988.23|787.2|1299.06
 ----------|--------------------------------------------------------
 Block Size|32B (bzip, mcf, hmmer) ή 64B (sjeng, libm)
 L2 Cache  |1MB 8-way
-D-Cache   |32KB 2-way
+D-Cache   |32KB 2-way (bzip, mcf, sjeng, libm) ή 32KB 4-way (hmmer)
 I-Cache   |16KB 2-way (bzip, hmmer, sjeng, libm) ή 32KB 4-way (mcf)
 
 Το mcf εμφανίζει μεγαλύτερη απόδοση με την χρήση μεγαλύτερης I-Cache, διότι
